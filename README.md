@@ -53,6 +53,7 @@ Handling APIs that Require OAuth2
   - Use the [Slack Scope Documentation](https://api.slack.com/docs/oauth-scopes) to select what scopes you'd like (keep it minimal)
   - When you get an `access_token`, store it in `UserDefaults` for future use. (On launch, check for the existance of the token to bypass having to go through the OAuth flow on every run)
   - Make a single, basic request to any [SlackAPI endpoint](https://api.slack.com/methods) using your token to verify that it is working. 
+  - Add two buttons to your storyboard, one for logging in to Github and the other to log into Slack. Tapping on the button should start the OAuth process for their respective API. (This means that the OAuth process should not happen immediately on application launch.
 
 #### Optional
 2. Add a collection view to our Gitrest app, populate it with your starred repos
