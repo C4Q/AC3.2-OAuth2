@@ -45,4 +45,6 @@ Handling APIs that Require OAuth2
 ---
 ### Exercises
 
-TBD based on day's progress
+1. Recreate the above OAuth login functionality for the Slack API
+2. Add a collection view to our Gitrest app, populate it with your starred repos
+3. Add a search bar with a default search on the most popular swift repos. Tapping on a cell should "star" the repo
