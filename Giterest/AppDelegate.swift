@@ -29,7 +29,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   }
   
   func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
-    print("opening")
+    
+    if let sendingApp = options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String {
+      
+      if sendingApp == "com.apple.mobilesafari" {
+        GithubOAuthManager.shared.requestAuthToken(url: url)
+      }
+    }
+    
     return true
   }
 
