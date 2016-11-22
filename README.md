@@ -46,6 +46,7 @@ Handling APIs that Require OAuth2
 ### Exercises
 
 1. Ensure you're able to parse out the `access_token` and store it to `UserDefaults`. Your app delegate should not attempt to make a OAuth request if you already have the `token` stored in `UserDefaults`. 
+  - While you're at it, store the `client_id` and `client_secret` to `UserDefaults` as well.
   - Make a single, simple API request to get all of your (or any other Github user) starred repositories. Read the [documentation](https://developer.github.com/v3/activity/starring/) on how to do this.
 2. Recreate the above OAuth login functionality for the Slack API
   - Log into [SlackAPI](https://api.slack.com/) in your browser
