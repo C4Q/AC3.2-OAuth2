@@ -28,10 +28,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     return true
   }
   
+  // This delegate method gets hit when we return from Safari, following a successful Authentication/Authorization request
   func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
     
+    // This is a bit unnecessary, but we can check the sending app to see what has opened ours. In this case, we check to see if it was Safari
     if let sendingApp = options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String {
-      
       if sendingApp == "com.apple.mobilesafari" {
         GithubOAuthManager.shared.requestAuthToken(url: url)
       }
