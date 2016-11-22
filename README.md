@@ -45,7 +45,9 @@ Handling APIs that Require OAuth2
 ---
 ### Exercises
 
-1. Recreate the above OAuth login functionality for the Slack API
+1. Ensure you're able to parse out the `access_token` and store it to `UserDefaults`. Your app delegate should not attempt to make a OAuth request if you already have the `token` stored in `UserDefaults`. 
+  - Make a single, simple API request to get all of your (or any other Github user) starred repositories. Read the [documentation](https://developer.github.com/v3/activity/starring/) on how to do this.
+2. Recreate the above OAuth login functionality for the Slack API
   - Log into [SlackAPI](https://api.slack.com/) in your browser
   - Create a new app. Name it whatever you wish along with a custom url scheme. 
   - Create a separate class, `SlackOAuthManager` with two functions: one to make an authentication request, and another to make an access token request. You can model `SlackOAuthManager` in any way you'd like, but follow coding best-practices. 
