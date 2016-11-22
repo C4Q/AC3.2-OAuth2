@@ -46,5 +46,14 @@ Handling APIs that Require OAuth2
 ### Exercises
 
 1. Recreate the above OAuth login functionality for the Slack API
+  - Log into [SlackAPI](https://api.slack.com/) in your browser
+  - Create a new app. Name it whatever you wish along with a custom url scheme. 
+  - Create a separate class, `SlackOAuthManager` with two functions: one to make an authentication request, and another to make an access token request. You can model `SlackOAuthManager` in any way you'd like, but follow coding best-practices. 
+  - Use the [Slack OAuth Documentation](https://api.slack.com/docs/oauth) to determine your request parameters and response content. 
+  - Use the [Slack Scope Documentation](https://api.slack.com/docs/oauth-scopes) to select what scopes you'd like (keep it minimal)
+  - When you get an `access_token`, store it in `UserDefaults` for future use. (On launch, check for the existance of the token to bypass having to go through the OAuth flow on every run)
+  - Make a single, basic request to any [SlackAPI endpoint](https://api.slack.com/methods) using your token to verify that it is working. 
+
+#### Optional
 2. Add a collection view to our Gitrest app, populate it with your starred repos
 3. Add a search bar with a default search on the most popular swift repos. Tapping on a cell should "star" the repo
